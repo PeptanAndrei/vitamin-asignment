@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/vitamin-asignment/static/css/main.ae07bb8a.css",
+    "main.js": "/vitamin-asignment/static/js/main.0afcb0c1.js",
+    "index.html": "/vitamin-asignment/index.html",
+    "main.ae07bb8a.css.map": "/vitamin-asignment/static/css/main.ae07bb8a.css.map",
+    "main.0afcb0c1.js.map": "/vitamin-asignment/static/js/main.0afcb0c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae07bb8a.css",
+    "static/js/main.0afcb0c1.js"
+  ]
+}
