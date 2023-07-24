@@ -31,6 +31,9 @@
 .App-chart-container {
   max-width: 1000px;
 }
+.App-error-component{
+  color:red;
+}
 
 @keyframes App-logo-spin {
   from {

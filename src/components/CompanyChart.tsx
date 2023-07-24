@@ -1,5 +1,4 @@
 import { CompanyData } from "../types/CompanyData";
-import type { ChartData, ChartOptions } from 'chart.js';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -9,8 +8,11 @@ import {
     Title,
     Tooltip,
     Legend,
+    ChartData,
+    ChartOptions,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import ErrorComponent from "./ErrorComponent";
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -49,14 +51,13 @@ export default function CompanyChart({ companyData }: CompanyChartProps): JSX.El
             },
             title: {
                 display: true,
-            },           
-        
+            }
         }
     }
     
     return (
         <>
-            {data ? <Line options={options} data={data} /> : <p>Cannot draw chart</p>}
+            {data ? <Line options={options} data={data}/> : <ErrorComponent error={'ERROR: Cannot draw chart'}></ErrorComponent>}
         </>
     )
 }
