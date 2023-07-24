@@ -1,3 +1,4 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
 .App {
   text-align: center;
 }
@@ -26,6 +27,9 @@
 
 .App-link {
   color: #61dafb;
+}
+.App-chart-container {
+  max-width: 1000px;
 }
 
 @keyframes App-logo-spin {
