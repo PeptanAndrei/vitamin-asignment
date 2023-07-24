@@ -8,14 +8,13 @@ import LoadingComponent from './components/LoadingComponent';
 const CompanyDropdown = lazy(() => import('./components/CompanyDropdown'));
 const CompanyChart = lazy(() => import('./components/CompanyChart'));
 
-
 function App() {
   const [companies, setCompanies] = useState<Company[] | null>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [selectedCompanyData, setSelectedCompanyData] = useState<CompanyData[] | null>()
   const selectedCompanyHandler = (company: Company) => {
     setLoading(true);
-    const url = `https://cors-anywhere.herokuapp.com/https://data.nasdaq.com/api/v3/datasets/WIKI/${company.dataset_code}?api_key=FVby2pSTqW1_iT5wC5QM`
+    const url = `https://data.nasdaq.com/api/v3/datasets/WIKI/${company.dataset_code}?api_key=FVby2pSTqW1_iT5wC5QM`
     axios.get(url, {
       headers: {
         Accept: 'application/json',
@@ -34,17 +33,11 @@ function App() {
       })
   }
   const fetchCompanies = async () => {
-    const url = 'https://cors-anywhere.herokuapp.com/https://data.nasdaq.com/api/v3/datasets/?database_code=WIKI&api_key=FVby2pSTqW1_iT5wC5QM'
+    const url = 'https://data.nasdaq.com/api/v3/datasets/?database_code=WIKI&api_key=FVby2pSTqW1_iT5wC5QM'
     const response = await fetch(url, {
       method: "GET",
-      credentials: 'same-origin',
       headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Credentials": "false",
-        "Access-Control-Allow-Headers": "allow,cache-control,content-encoding,content-security-policy,content-type,date,etag,pragma,referrer-policy,server,strict-transport-security,x-content-type-options,x-frame-options,x-ratelimit-limit,x-ratelimit-remaining,x-request-id,x-runtime,x-xss-protection,content-length,set-cookie,set-cookie,set-cookie,x-cdn,x-iinfo",
-        "Access-Control-Allow-Methods": "GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH",
-        "Access-Control-Expose-Headers": "allow, cache-control, content-encoding, content-security-policy, content-type, date, etag, pragma, referrer-policy, server, strict-transport-security, x-content-type-options, x-frame-options, x-ratelimit-limit, x-ratelimit-remaining, x-request-id, x-runtime, x-xss-protection, content-length, set-cookie, set-cookie, set-cookie, x-cdn, x-iinfo",
+        Accept: 'application/json',
       },
     })
     const data = await response.json()
@@ -74,7 +67,7 @@ function App() {
                 <CompanyChart companyData={selectedCompanyData}></CompanyChart>
               </Suspense>
               : null
-            : <LoadingComponent />}
+              : <LoadingComponent />}
       </div>
     </div>
   );
