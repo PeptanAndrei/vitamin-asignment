@@ -1,13 +1,19 @@
 {
   "files": {
     "main.css": "/vitamin-asignment/static/css/main.ae07bb8a.css",
-    "main.js": "/vitamin-asignment/static/js/main.0afcb0c1.js",
+    "main.js": "/vitamin-asignment/static/js/main.96185d22.js",
+    "static/js/64.142d0d5c.chunk.js": "/vitamin-asignment/static/js/64.142d0d5c.chunk.js",
+    "static/js/360.19921c48.chunk.js": "/vitamin-asignment/static/js/360.19921c48.chunk.js",
+    "static/js/623.3930e660.chunk.js": "/vitamin-asignment/static/js/623.3930e660.chunk.js",
     "index.html": "/vitamin-asignment/index.html",
     "main.ae07bb8a.css.map": "/vitamin-asignment/static/css/main.ae07bb8a.css.map",
-    "main.0afcb0c1.js.map": "/vitamin-asignment/static/js/main.0afcb0c1.js.map"
+    "main.96185d22.js.map": "/vitamin-asignment/static/js/main.96185d22.js.map",
+    "64.142d0d5c.chunk.js.map": "/vitamin-asignment/static/js/64.142d0d5c.chunk.js.map",
+    "360.19921c48.chunk.js.map": "/vitamin-asignment/static/js/360.19921c48.chunk.js.map",
+    "623.3930e660.chunk.js.map": "/vitamin-asignment/static/js/623.3930e660.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ae07bb8a.css",
-    "static/js/main.0afcb0c1.js"
+    "static/js/main.96185d22.js"
   ]
 }
